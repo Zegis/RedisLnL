@@ -4,3 +4,16 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.SomethingImportant</h3>
 
+<h2>Sorted Set example:</h2>
+<p>Current content: <br />@Html.Raw(ViewBag.SortedSet)<hr/>
+    @Html.ActionLink("Reset Set", "ResetSortedSet", "Home")
+</p>
+
+<form id="FormForSorted" action="SaveSet" method="post">
+    <div>
+        <textarea name="TextForSet" rows="15"></textarea>
+        <br /> <br />
+        <label>Random scores?</label><input type="checkbox" value="true" name="randomScores" />
+        <input type="submit" value="Add to sorted set" />
+    </div>
+</form>
