@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Session Example";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>Today is @ViewBag.Today</h3>
+<h3>@ViewBag.SomethingImportant</h3>
+
+<form id="FormForSession" action="SaveSession" method="post">
+    <div>
+        <input type="text" name="NewValue" />
+
+        <input type="submit" value="Store in session!" />
+    </div>
+</form>
