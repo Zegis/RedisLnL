@@ -29,7 +29,11 @@ namespace RedisPubSub
             Console.WriteLine("Started listening to messagef from Mars, Phobos and Cosmos...");
             while (true)
             {
-                
+                if (Console.ReadKey(true).Key == ConsoleKey.C)
+                    sub[1].Publish("Cosmos", "From console!");
+
+                if (Console.ReadKey(true).Key == ConsoleKey.X)
+                    sub[0].Publish("Mars", "From console!");
 
                 if (Console.ReadKey(true).Key == ConsoleKey.Home)
                         break;

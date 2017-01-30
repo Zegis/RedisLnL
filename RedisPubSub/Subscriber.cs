@@ -22,5 +22,10 @@ namespace RedisPubSub
         {
             _subscriber.Subscribe(channelName, (channel, message) => { Console.WriteLine(this._name + " recieved " + message + " from " + channel); });
         }
+
+        internal void Publish(string ch,string p)
+        {
+            _subscriber.Publish(ch, p);
+        }
     }
 }
